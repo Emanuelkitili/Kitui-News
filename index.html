@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KITUI NEWS - By Ken</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<div class="header"><div><div class="logo">KITUI <span>NEWS</span></div><div class="by">Presenter: Ken 🔥 Kitui's Voice</div></div><div>🔔</div></div>
+
+<div class="ticker"><b>⚡ BREAKING</b><div class="ticker-track" id="tickerTrack"><span>Welcome to Kitui News - Real Stories From Kitui County 🔥</span><span>Welcome to Kitui News - Real Stories From Kitui County 🔥</span></div></div>
+
+<input class="search" id="searchInput" placeholder="🔍 Search news in Kitui..." oninput="render()">
+
+<div class="cats" id="cats">
+<button class="cat active" onclick="setCat('All',this)">All</button>
+<button class="cat" onclick="setCat('News',this)">📰 News</button>
+<button class="cat" onclick="setCat('Politics',this)">🏛️ Politics</button>
+<button class="cat" onclick="setCat('Sports',this)">⚽ Sports</button>
+<button class="cat" onclick="setCat('Gospel',this)">🙏 Gospel</button>
+<button class="cat" onclick="setCat('Entertainment',this)">🎬 Entertainment</button>
+</div>
+
+<div class="create">
+<h3>✍️ Post News - Ken</h3>
+<input id="pTitle" placeholder="Headline e.g. Kitui Town Gets New Market">
+<select id="pCat"><option>News</option><option>Politics</option><option>Sports</option><option>Gospel</option><option>Entertainment</option></select>
+<textarea id="pText" placeholder="Write full story here..."></textarea>
+<label class="gallery-btn">📷 / 🎥 Choose Photo or Video<input type="file" id="pFile" accept="image/*,video/*"></label>
+<div id="preview"></div>
+<button class="btn" onclick="doPost()">🚀 PUBLISH NEWS</button>
+</div>
+
+<div id="hero"></div>
+<div id="feed"></div>
+
+<div class="footer">© 2026 Kitui News - Presenter Ken | WhatsApp: 0712345678<br>Kitui's Voice - Real Stories, Real People</div>
+</div>
+
+<div class="bottom"><div onclick="window.scrollTo(0,0)">🏠<br>Home</div><div onclick="setCat('News',null)">📰<br>News</div><div onclick="document.querySelector('.create').scrollIntoView()">➕<br>Post</div><div onclick="setCat('Sports',null)">⚽<br>Sports</div><div>👤<br>Ken</div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
